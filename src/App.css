@@ -1,38 +1,179 @@
-.App {
-  text-align: center;
-}
+/*-----------------
+Global Style & Font
+------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+  /* font-family: "Josefin Sans", sans-serif; */
+  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Oswald', sans-serif; */
+  /* font-family: 'Readex Pro', sans-serif; */
+  /* font-family: 'Roboto Condensed', sans-serif; */
+  /* font-family: 'Bebas Neue', cursive; */
+}
+p,span, h1,h2,h3,h4, button{
+  letter-spacing: 1.4px;
+}
+.btn {
+  background-color: #fcca42 !important;
+  color: black !important;
+  padding: 7px 30px !important;
+  border-radius: 0px !important;
+}
+.btn-primary {
+  border-color: transparent !important;
+}
+.btn:active,
+button:active {
+  outline-color: none !important;
+}
+/*-----------------------
+Header Component Section
+------------------------- */
+.header-img {
+  width: 400px;
+}
+.header-section {
+  background-image: url("./Image/Header-Backgroud.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: color;
+}
+.header-text {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.header-text h1 {
+  font-weight: 900;
+  font-size: 62px;
+  letter-spacing: 2px;
+}
+.header-text p {
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+.header-text button {
+  font-weight: 900;
+}
+.nav-link {
+  color: white !important;
+  padding-left: 20px !important;
+  font-weight: bold;
+}
+/*-----------------------
+Service Component Section
+------------------------- */
+.service {
+  height: 380px;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-blend-mode: color;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 120px 10px 10px 10px !important;
+}
+.service1 {
+  background-image: url("./Image/service2.jpg");
+}
+.service2 {
+  background-image: url("./Image/service1.jpg");
+}
+.service2 img {
+  /* height: 90px; */
+  box-sizing: border-box;
+  margin-top: 30px;
+}
+.service3 {
+  background-image: url("./Image/service.jpg");
+}
+.service p {
+  font-weight: 300;
+}
+.service h3 {
+  margin-top: 20px !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*-----------------------
+AboutUs Component Section
+------------------------- */
+.about-us-text {
+  padding-left: 45px;
+}
+.about-us-text h1 {
+  color: #f4f4f5 !important;
+  font-size: 52px;
+  font-weight: 900;
+}
+.text-yellow {
+  color: #fcca42 !important;
+}
+.about-us-text h3 {
+  font-weight: 900;
+}
+.free-space {
+  margin-bottom: 30px;
+}
+
+.bottom {
+  bottom: 20px;
+  position: absolute;
+  background-color: black;
+  padding: 20px 120px;
+  margin-left: 0px !important;
+}
+
+.program {
+  height: 450px;
+  width: 560px;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-blend-mode: color;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.program1 {
+  background-image: url("./Image/classONE.png");
+}
+.program2 {
+  background-image: url("./Image/classsTwo.jpg");
+}
+.program h3 {
+  background-color: #fcca42;
+  bottom: 20px;
+  position: absolute;
+  padding: 12px 40px;
+  text-transform: uppercase;
+  color: black;
+}
+.box{
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    /* height: 350px; */
+}
+.footer span{
+  font-weight: 300;
+}
+.footer{
+  width: 33%;
+}
+.footer-text{
+  font-weight: 300;
+}
+.bg-custom{
+  background-color: #171426;
+}
+.footer p{
+  font-weight: bold;
 }
