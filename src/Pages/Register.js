@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SubHeader from "../Components/SubHeader";
 import Footer from "../Components/Footer";
 import { Form, Button } from "react-bootstrap";
+import { useDispatch } from "react-redux";
+import { userLoggedIn } from "../Redux/auth/action";
 
 export default function Register() {
+
   return (
     <div>
       <SubHeader PageName="ACCOUNT"></SubHeader>

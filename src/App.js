@@ -7,8 +7,19 @@ import Register from "./Pages/Register";
 import Dashboard from "./Pages/Dashboard";
 import SingleClass from "./Pages/SingleClass";
 import ContactUs from "./Pages/ContactUs";
+import { useDispatch } from "react-redux";
+import { userLoggedIn } from "./Redux/auth/action";
+import { useEffect } from "react";
 
 function App() {
+  const user = { email: "emon@emon.com" };
+  const dispatch = useDispatch();
+  
+  useEffect(()=>{
+    dispatch(userLoggedIn(user))
+
+  },[user, dispatch]) 
+  
   return (
     <BrowserRouter>
       <Routes>

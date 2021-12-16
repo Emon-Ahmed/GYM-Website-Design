@@ -4,15 +4,17 @@ import { Link } from "react-router-dom";
 import Logo from "../Image/logo.png";
 import VideIcon from "../Image/BackGroud.png";
 
+
 export default function Header() {
+
   return (
     <>
       <div className="header-section">
         <Navbar expand="lg">
           <Container>
             <Navbar.Brand>
-            <Nav.Link as={Link} to="/">
-              <img style={{ maxHeight: "100px" }} src={Logo} alt="Logo" />
+              <Nav.Link as={Link} to="/">
+                <img style={{ maxHeight: "100px" }} src={Logo} alt="Logo" />
               </Nav.Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
@@ -52,7 +54,10 @@ export default function Header() {
               aliquam <br />
               maxime? architecto optio hic itaque aliquam maxime?
             </p>
-            <Link to="/register"> <Button>JOIN US</Button> </Link>
+            <Link to="/register">
+              {" "}
+              <Button>JOIN US</Button>{" "}
+            </Link>
           </div>
           <div className="header-video">
             <img src={VideIcon} className="header-img" alt="Video Icon" />
