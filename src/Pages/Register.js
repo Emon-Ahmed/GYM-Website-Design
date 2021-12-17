@@ -4,9 +4,9 @@ import Footer from "../Components/Footer";
 import { Form, Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { userLoggedIn } from "../Redux/auth/action";
+import { Link } from "react-router-dom";
 
 export default function Register() {
-
   return (
     <div>
       <SubHeader PageName="ACCOUNT"></SubHeader>
@@ -16,22 +16,28 @@ export default function Register() {
             <h1>Login</h1>
           </div>
           <Form>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
-              <Form.Text className="text-muted">
-                We'll never share your email with anyone else.
-              </Form.Text>
-            </Form.Group>
+              <Form.Floating className="mb-3">
+                <Form.Control
+                  id="floatingInputCustom"
+                  type="email"
+                  placeholder="name@example.com"
+                />
+                <label htmlFor="floatingInputCustom">Email address</label>
+              </Form.Floating>
+              <Form.Floating className="mb-3">
+                <Form.Control
+                  id="floatingPasswordCustom"
+                  type="password"
+                  placeholder="Password"
+                />
+                <label htmlFor="floatingPasswordCustom">Password</label>
+              </Form.Floating>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
-            </Form.Group>
-
-            <Button variant="primary" type="submit">
-              Login
-            </Button>
+            <Link to="/dashboard">
+              <Button variant="primary" type="submit">
+                Login
+              </Button>
+            </Link>
           </Form>
         </div>
         <div className="register w-50 mx-2">
@@ -39,22 +45,28 @@ export default function Register() {
             <h1>Register</h1>
           </div>
           <Form>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
-              <Form.Text className="text-muted">
-                We'll never share your email with anyone else.
-              </Form.Text>
-            </Form.Group>
+              <Form.Floating className="mb-3">
+                <Form.Control
+                  id="floatingInputCustom"
+                  type="email"
+                  placeholder="name@example.com"
+                />
+                <label htmlFor="floatingInputCustom">Email address</label>
+              </Form.Floating>
+              <Form.Floating className="mb-3">
+                <Form.Control
+                  id="floatingPasswordCustom"
+                  type="password"
+                  placeholder="Password"
+                />
+                <label htmlFor="floatingPasswordCustom">Password</label>
+              </Form.Floating>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
-            </Form.Group>
-
-            <Button variant="primary" type="submit">
-              Register
-            </Button>
+            <Link to="/dashboard">
+              <Button variant="primary" type="submit">
+                Login
+              </Button>
+            </Link>
           </Form>
         </div>
       </div>
