@@ -34,7 +34,7 @@ p,span, h1,h2,h3,h4, button{
   border-color: transparent !important;
 }
 .btn:active,
-button:active {
+button:active, .btn:focus, button:focus {
   outline-color: none !important;
 }
 /*-----------------------

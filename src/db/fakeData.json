@@ -1,0 +1,38 @@
+[
+    {
+      "key": 1,
+      "name": "PSYCHO TRAINING",
+      "description": "Cancer is a group of diseases involving abnormal cell growth",
+      "photo": "https://vortijuddho.com/programming-hero/cancer.png"
+    },
+    {
+      "key": 2,
+      "name": "SELF DEFENSE",
+      "description": "Surgery is a medical specialty that uses operative manual",
+      "photo": "https://vortijuddho.com/programming-hero/surgery.png"
+    },
+    {
+      "key": 3,
+      "name": "ADVANCE GYM",
+      "description": "A Diagnostic  Test  is  a test used to identify a condition manual",
+      "photo": "https://vortijuddho.com/programming-hero/diagnostic.png"
+    },
+    {
+      "key": 4,
+      "name": "CARDIO TRAINING",
+      "description": "Dentistry, also known as dental medicine and oral medicine",
+      "photo": "https://vortijuddho.com/programming-hero/dental.png"
+    },
+    {
+      "key": 5,
+      "name": "STRENGTH TRAINING",
+      "description": "There are things you can do to help keep your eyes healthy",
+      "photo": "https://vortijuddho.com/programming-hero/eye-care.png"
+    },
+    {
+      "key": 6,
+      "name": "PSYCHO TRAINING",
+      "description": "Orthopaedic surgery or orthopaedics, is the branch of surgery",
+      "photo": "https://vortijuddho.com/programming-hero/orthopadic.png"
+    }
+  ]

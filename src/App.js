@@ -16,6 +16,9 @@ import Details from "./Components/Details";
 import AllDetails from "./Components/AllDetails";
 import MakeAdmin from "./Components/MakeAdmin";
 import DefaultDashboard from "./Components/Dashboard";
+import CheckOut from "./Pages/CheckOut";
+
+
 
 function App() {
   const user = { email: "emon@emon.com" };
@@ -36,6 +39,7 @@ function App() {
         </Route>
         <Route path="register" element={<Register />} />
         <Route path="contact" element={<ContactUs />} />
+        <Route path="checkout" element={<CheckOut />} />
         <Route path="dashboard" element={<Dashboard />} >
           <Route path="order" element={<Order />} />
           <Route path="allorder" element={<AllOrder />} />
@@ -43,7 +47,6 @@ function App() {
           <Route path="alldetails" element={<AllDetails />} />
           <Route path="makeadmin" element={<MakeAdmin />} />
           <Route index element={<DefaultDashboard />} />
-
         </Route>
       </Routes>
     </BrowserRouter>

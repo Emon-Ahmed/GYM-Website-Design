@@ -1,12 +1,75 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import SubHeader from "../Components/SubHeader";
 import Footer from "../Components/Footer";
 import { Form, Button } from "react-bootstrap";
-import { useDispatch } from "react-redux";
-import { userLoggedIn } from "../Redux/auth/action";
 import { Link } from "react-router-dom";
+import { AiOutlineGoogle } from "react-icons/ai";
+import {
+  getAuth,
+  signInWithPopup,
+  GoogleAuthProvider,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import initializeFirebase from "../Firebase/InitializeApp";
+initializeFirebase();
+
+const auth = getAuth();
+const provider = new GoogleAuthProvider();
 
 export default function Register() {
+  var [emailLog, setEmailLog] = useState("");
+  var [passwordLog, setPasswordLog] = useState("");
+  var [emailRegData, setEmailReg] = useState("");
+  var [passwordRegData, setPasswordReg] = useState("");
+
+  const googleLog = () => {
+    signInWithPopup(auth, provider).then((result) => {
+      const user = result.user;
+      console.log(user);
+    });
+  };
+
+  const userLog = () => {
+    signInWithEmailAndPassword(auth, emailLog, passwordLog).then(
+      (userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        // ...
+        console.log(user);
+      }
+    );
+  };
+
+  const userReg = () => {
+    createUserWithEmailAndPassword(auth, emailRegData, passwordRegData).then(
+      (userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        // ...
+        console.log(user);
+      }
+    );
+  };
+
+  const emailLogInput = (e) => {
+    const email = e.target.value;
+    setEmailLog(email);
+  };
+  const passwordLogInput = (e) => {
+    const password = e.target.value;
+    setPasswordLog(password);
+  };
+
+  const emailRegInput = (e) => {
+    const email = e.target.value;
+    setEmailReg(email);
+  };
+  const passwordRegInput = (e) => {
+    const password = e.target.value;
+    setPasswordReg(password);
+  };
+
   return (
     <div>
       <SubHeader PageName="ACCOUNT"></SubHeader>
@@ -15,59 +78,77 @@ export default function Register() {
           <div className="header-text text-black mx-auto">
             <h1>Login</h1>
           </div>
-          <Form>
-              <Form.Floating className="mb-3">
-                <Form.Control
-                  id="floatingInputCustom"
-                  type="email"
-                  placeholder="name@example.com"
-                />
-                <label htmlFor="floatingInputCustom">Email address</label>
-              </Form.Floating>
-              <Form.Floating className="mb-3">
-                <Form.Control
-                  id="floatingPasswordCustom"
-                  type="password"
-                  placeholder="Password"
-                />
-                <label htmlFor="floatingPasswordCustom">Password</label>
-              </Form.Floating>
+          <div>
+            <Form.Floating className="mb-3">
+              <Form.Control
+                id="floatingInputCustom"
+                type="email"
+                name="email"
+                onBlur={emailLogInput}
+                placeholder="name@example.com"
+              />
+              <label htmlFor="floatingInputCustom">Email address</label>
+            </Form.Floating>
+            <Form.Floating className="mb-3">
+              <Form.Control
+                id="floatingPasswordCustom"
+                name="password"
+                onBlur={passwordLogInput}
+                type="password"
+                placeholder="Password"
+              />
+              <label htmlFor="floatingPasswordCustom">Password</label>
+            </Form.Floating>
 
-            <Link to="/dashboard">
-              <Button variant="primary" type="submit">
+            <div className="d-flex">
+              <Button onClick={userLog} variant="primary" type="submit">
                 Login
               </Button>
-            </Link>
-          </Form>
+              <Button
+                className="mx-2"
+                onClick={googleLog}
+                type="submit"
+              >
+                <span>
+                  <AiOutlineGoogle />
+                </span>
+                <span>Google</span>
+              </Button>
+            </div>
+          </div>
         </div>
         <div className="register w-50 mx-2">
           <div className="header-text text-black mx-auto">
             <h1>Register</h1>
           </div>
-          <Form>
-              <Form.Floating className="mb-3">
-                <Form.Control
-                  id="floatingInputCustom"
-                  type="email"
-                  placeholder="name@example.com"
-                />
-                <label htmlFor="floatingInputCustom">Email address</label>
-              </Form.Floating>
-              <Form.Floating className="mb-3">
-                <Form.Control
-                  id="floatingPasswordCustom"
-                  type="password"
-                  placeholder="Password"
-                />
-                <label htmlFor="floatingPasswordCustom">Password</label>
-              </Form.Floating>
+          <>
+            <Form.Floating className="mb-3">
+              <Form.Control
+                id="floatingInputCustom"
+                type="email"
+                name="emailReg"
+                onBlur={emailRegInput}
+                placeholder="name@example.com"
+              />
+              <label htmlFor="floatingInputCustom">Email address</label>
+            </Form.Floating>
+            <Form.Floating className="mb-3">
+              <Form.Control
+                id="floatingPasswordCustom"
+                type="password"
+                name="passwordReg"
+                onBlur={passwordRegInput}
+                placeholder="Password"
+              />
+              <label htmlFor="floatingPasswordCustom">Password</label>
+            </Form.Floating>
 
-            <Link to="/dashboard">
-              <Button variant="primary" type="submit">
-                Login
+            <>
+              <Button onClick={userReg} type="submit">
+                Register
               </Button>
-            </Link>
-          </Form>
+            </>
+          </>
         </div>
       </div>
       <Footer></Footer>
