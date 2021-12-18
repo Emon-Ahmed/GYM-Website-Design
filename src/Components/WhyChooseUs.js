@@ -13,29 +13,26 @@ export default function WhyChooseUs() {
         </h1>
       </div>
       <Container>
-        <div className="d-flex justify-content-between mt-4 mb-5 pb-5">
+        <div className="display-grid justify-content-between mt-4 mb-5 pb-5">
           <div className="box mx-2 d-block text-black text-center p-4">
             <img src={WhyChooseUs0} className="p-4" alt="Service" />
             <h3>PROGRESSION</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
-              deleniti enim! Assumenda deleniti modi iste!
+            We aim to give a system in which everyone is respected and to provide a unique.
             </p>
           </div>
           <div className="box mx-2 d-block text-black text-center p-4">
             <img src={WhyChooseUs1} className="p-4" alt="Service" />
             <h3>PROGRESSION</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
-              deleniti enim! Assumenda deleniti modi iste!
+            Gym & Fitness enables everyone to work and produce excellence and Fine. 
             </p>
           </div>
           <div className="box mx-2 d-block text-black text-center p-4">
             <img src={WhyChooseUs2} className="p-4 mt-4" alt="Service" />
             <h3>PROGRESSION</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
-              deleniti enim! Assumenda deleniti modi iste!
+            From the staff to the clients involved in the gym it is all about working for the greater good.
             </p>
           </div>
         </div>

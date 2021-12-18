@@ -8,30 +8,36 @@ export default function Service() {
   return (
     <div>
       <Container>
-        <div className="d-flex justify-content-between my-5 pt-5 pb-3">
-          <div className="service service1 mx-1 d-block text-white">
-            <img src={ServiceIcon1} alt="Service" />
-            <h3>PROGRESSION</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
-              deleniti enim! Assumenda deleniti modi iste!
-            </p>
+        <div className="display-grid justify-content-between my-5 pt-5 pb-3">
+          <div className="service mx-1 service1 text-white">
+            <div>
+              <img src={ServiceIcon1} alt="Service" />
+              <h3>PROGRESSION</h3>
+              <p>
+                We aim to give a system in which everyone is respected and to
+                provide a unique and enjoyable environment.
+              </p>
+            </div>
           </div>
-          <div className="service service2 mx-2 d-block text-white">
-            <img src={ServiceIcon} alt="Service" />
-            <h3>PROGRESSION</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
-              deleniti enim! Assumenda deleniti modi iste!
-            </p>
+          <div className="service mx-1 service2 text-white">
+            <div>
+              <img src={ServiceIcon} alt="Service" />
+              <h3>IMPROVE</h3>
+              <p>
+                You would like to improve your fitness level, to surpass your
+                professional athlete goals
+              </p>
+            </div>
           </div>
-          <div className="service service3 mx-1 d-block text-white">
-            <img src={ServiceIcon2} alt="Service" />
-            <h3>PROGRESSION</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
-              deleniti enim! Assumenda deleniti modi iste!
-            </p>
+          <div className="service mx-1 service3 text-white">
+            <div>
+              <img src={ServiceIcon2} alt="Service" />
+              <h3>FOCUS</h3>
+              <p>
+                Find us on the street opposite to SC BIG Fashion at two-level
+                venue - 1.000 m2 wide space.
+              </p>
+            </div>
           </div>
         </div>
       </Container>

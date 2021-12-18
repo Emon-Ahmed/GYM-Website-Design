@@ -11,32 +11,30 @@ export default function SingleClass() {
   const state = useSelector((state) => state);
   const { classes, auth } = state;
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const SingleClass = classes.classes?.find((item) => item.key == classId);
   const dispatch = useDispatch();
 
   const handleClass = async () => {
     const data = { ...SingleClass, email: auth.user.email };
     await dispatch(addClass(data));
-    navigate('/dashboard/order')
-
+    navigate("/dashboard/order");
   };
 
   return (
     <div>
       <SubHeader PageName="OUR CLASSES"></SubHeader>
       <div className="container">
-        <div className="d-flex">
+        <div className="d-flex my-5 py-5">
           <div className="photo">
-              <img className="w-50 h-50" src={SingleClass?.photo} alt="" />
+            <img className="w-75 h-100" src={SingleClass?.photo} alt="" />
           </div>
-          <div className="text">
-            <p className="text-center">{SingleClass?.name}</p>
-            <>
-              <button className="btn btn-warning" onClick={handleClass}>
-                Purchase
-              </button>
-            </>
+          <div className="text-center">
+            <h1 className="text-center">{SingleClass?.name}</h1>
+            <p className="text-center">{SingleClass?.description}</p>
+            <button className="text-center btn btn-warning" onClick={handleClass}>
+              Purchase
+            </button>
           </div>
         </div>
       </div>

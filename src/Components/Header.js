@@ -59,15 +59,15 @@ export default function Header() {
                 {user?.email ? (
                   <>
                     <Nav.Link>
-                      <Button onClick={logOut}>Logout</Button>
+                      <Button className="btn-warning" onClick={logOut}>Logout</Button>
                     </Nav.Link>
                     <Nav.Link as={Link} to="/dashboard">
-                      <Button>Dashboard</Button>
+                      <Button className="btn-warning">Dashboard</Button>
                     </Nav.Link>
                   </>
                 ) : (
                   <Nav.Link as={Link} to="/register">
-                    <Button>Join Now</Button>
+                    <Button className="btn-warning">Join Now</Button>
                   </Nav.Link>
                 )}
               </Nav>
@@ -80,13 +80,10 @@ export default function Header() {
               THE BEST FITNESS <br /> STUDIO IN TOWN
             </h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga{" "}
-              <br /> esse porro eaque nobis quas architecto optio hic itaque
-              aliquam <br />
-              maxime? architecto optio hic itaque aliquam maxime?
+            Gym & Fitness is an ultra-modern unisex fitness center with the best amenities and training equipment. We offer a wide range of classes and exercising programs, tailored to improve stamina and fitness goals of each gym member, individually and at any level.
             </p>
             <Link to="/register">
-              <Button>JOIN US</Button>
+              <Button className="btn-warning">JOIN US</Button>
             </Link>
           </div>
           <div className="header-video">

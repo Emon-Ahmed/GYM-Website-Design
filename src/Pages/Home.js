@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <Header></Header>
       <Service></Service>
-      <AboutUs></AboutUs>
+      <AboutUs SectionName="ABOUT US"></AboutUs>
       <TraningProgram></TraningProgram>
       <WhyChooseUs></WhyChooseUs>
       <Footer></Footer>

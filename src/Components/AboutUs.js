@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import AboutUsImg from "../Image/about-us-img.png";
 
-export default function AboutUs() {
+export default function AboutUs({ SectionName }) {
   return (
     <Container>
       <div className="py-5">
@@ -11,20 +11,22 @@ export default function AboutUs() {
             <img className="w-100" src={AboutUsImg} alt="About Us" />
           </div>
           <div className="about-us-text w-50">
-            <h1>ABOUT US</h1>
+            <h1>{SectionName}</h1>
             <h3 className="text-yellow">WE ARE HERE TO DREAM!</h3>
             <h3 className="free-space">OUR TEAM IS HERE SURVE YOU.</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum
-              ullam soluta, accusamus unde quo natus veniam veritatis fugit
-              cumque magnam quidem dignissimos maiores eaque eos numquam rem!
-              Assumenda, nulla minus.
+              Gym & Fitness is a dynamic and diverse gym with a variety of group
+              classes for every fitness level and different interests, guided by
+              the trainers who are to answer the gym members needs at any time.
+              Trainers at PLANET Gym & Fitness meet the highest standards
+              expertise in all training programs.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum
-              ullam soluta, accusamus unde quo natus veniam veritatis fugit
-              cumque magnam quidem dignissimos maiores eaque eos numquam rem!
-              Assumenda, nulla minus.
+              We aim to give a system in which everyone is respected and to
+              provide a unique and enjoyable environment in which everyone can
+              feel comfortable. PLANET Gym & Fitness enables everyone to work
+              and produce excellence. From the staff to the clients involved in
+              the gym it is all about working for the greater good.
             </p>
           </div>
         </div>

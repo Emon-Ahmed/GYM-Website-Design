@@ -29,6 +29,7 @@ import { getClasses } from "./Redux/classes/action";
 import { getClass } from "./Redux/user/action";
 import RequireAuth from "./Components/PrivateRoute";
 import { userLoading } from "./Redux/auth/userSlice";
+import NotFound from "./Components/NotFound";
 
 const auth = getAuth();
 function App() {
@@ -72,6 +73,7 @@ function App() {
           <Route path="makeadmin" element={<RequireAuth><MakeAdmin /></RequireAuth>} />
           <Route index element={<DefaultDashboard />} />
         </Route>
+        <Route path='*' element={<NotFound />} />
       </Routes>
   );
 }
