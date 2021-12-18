@@ -245,9 +245,12 @@ h5 {
     font-size: 20px;
   }
   .about-us-text p {
-    font-size: 18px;
+    font-size: 14px;
   }
   .w-50{
+    width: 100% !important;
+  }
+  .about-us-text, .about-us-img{
     width: 100% !important;
   }
 }

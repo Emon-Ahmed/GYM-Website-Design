@@ -9,7 +9,7 @@ export default function Service() {
     <div>
       <Container>
         <div className="display-grid justify-content-between my-5 pt-5 pb-3">
-          <div className="service mx-1 service1 text-white">
+          <div className="service m-1 service1 text-white">
             <div>
               <img src={ServiceIcon1} alt="Service" />
               <h3>PROGRESSION</h3>
@@ -19,7 +19,7 @@ export default function Service() {
               </p>
             </div>
           </div>
-          <div className="service mx-1 service2 text-white">
+          <div className="service m-1 service2 text-white">
             <div>
               <img src={ServiceIcon} alt="Service" />
               <h3>IMPROVE</h3>
@@ -29,7 +29,7 @@ export default function Service() {
               </p>
             </div>
           </div>
-          <div className="service mx-1 service3 text-white">
+          <div className="service m-1 service3 text-white">
             <div>
               <img src={ServiceIcon2} alt="Service" />
               <h3>FOCUS</h3>

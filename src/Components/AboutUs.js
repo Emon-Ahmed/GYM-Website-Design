@@ -24,9 +24,7 @@ export default function AboutUs({ SectionName }) {
             <p>
               We aim to give a system in which everyone is respected and to
               provide a unique and enjoyable environment in which everyone can
-              feel comfortable. PLANET Gym & Fitness enables everyone to work
-              and produce excellence. From the staff to the clients involved in
-              the gym it is all about working for the greater good.
+              feel comfortable. PLANET Gym.
             </p>
           </div>
         </div>
