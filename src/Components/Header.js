@@ -80,9 +80,9 @@ export default function Header() {
               THE BEST FITNESS <br /> STUDIO IN TOWN
             </h1>
             <p>
-            Gym & Fitness is an ultra-modern unisex fitness center with the best amenities and training equipment. We offer a wide range of classes and exercising programs, tailored to improve stamina and fitness goals of each gym member, individually and at any level.
+            Gym & Fitness is an ultra-modern unisex fitness center with the best amenities and training equipment. We offer a wide range of classes and exercising programs, tailored to improve stamina and fitness goals of each gym member.
             </p>
-            <Link to="/register">
+            <Link className="header-btn" to="/register">
               <Button className="btn-warning">JOIN US</Button>
             </Link>
           </div>
