@@ -51,7 +51,7 @@ export default function Header() {
                   Our Classes
                 </Nav.Link>
                 <Nav.Link as={Link} to="/pricing">
-                  Pricing
+                  Service
                 </Nav.Link>
                 <Nav.Link as={Link} to="/contact">
                   Contact Us
@@ -86,8 +86,7 @@ export default function Header() {
               maxime? architecto optio hic itaque aliquam maxime?
             </p>
             <Link to="/register">
-              {" "}
-              <Button>JOIN US</Button>{" "}
+              <Button>JOIN US</Button>
             </Link>
           </div>
           <div className="header-video">

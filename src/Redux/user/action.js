@@ -1,7 +1,7 @@
 import { classData } from "./customerSlice";
 
 export const addClass = (data) => async (dispatch) => {
-  fetch("http://localhost:5000/addClass", {
+  fetch("https://nameless-plains-11584.herokuapp.com/addClass", {
     method: "POST",
     headers: {
       "content-type": "application/json",
@@ -19,7 +19,7 @@ export const addClass = (data) => async (dispatch) => {
 };
 
 export const getClass = (data) => async (dispatch) => {
-  const url = `http://localhost:5000/getClass/${data}`;
+  const url = `https://nameless-plains-11584.herokuapp.com/getClass/${data}`;
   fetch(url)
     .then((res) => res.json())
     .then((data) => {

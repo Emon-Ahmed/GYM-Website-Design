@@ -133,9 +133,6 @@ export default function Register() {
                 </span>
                 <span>Google</span>
               </Button>
-              <Button onClick={logOut} variant="primary" type="submit">
-                Logout
-              </Button>
             </div>
           </div>
         </div>

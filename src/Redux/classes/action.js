@@ -3,7 +3,7 @@ import { classesData, classesLoading } from "./classesSlice";
 export const getClasses = (data) => async (dispatch) => {
   dispatch(classesLoading(true))
 
-  fetch("http://localhost:5000/classes")
+  fetch("https://nameless-plains-11584.herokuapp.com/")
     .then((res) => res.json())
     .then((data) => {
       dispatch(classesData(data));

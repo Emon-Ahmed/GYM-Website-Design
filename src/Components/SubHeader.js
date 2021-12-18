@@ -49,7 +49,7 @@ export default function SubHeader({ PageName }) {
                   Our Classes
                 </Nav.Link>
                 <Nav.Link as={Link} to="/pricing">
-                  Pricing
+                  Service
                 </Nav.Link>
                 <Nav.Link as={Link} to="/contact">
                   Contact Us

@@ -6,7 +6,7 @@ import { Container } from "react-bootstrap";
 export default function Pricing() {
   return (
     <div>
-      <SubHeader PageName="PRICING"></SubHeader>
+      <SubHeader PageName="Service"></SubHeader>
       <Container>
         <div className="d-flex justify-content-between my-5 pt-5 pb-3">
           <div className="service service1 mx-1 d-block text-white">
