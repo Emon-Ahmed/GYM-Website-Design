@@ -133,10 +133,26 @@ AboutUs Component Section
   padding: 20px 120px;
   margin-left: 0px !important;
 }
-
-.program {
+.programhome{
   height: 450px;
-  width: 560px;
+  width: 550px;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-blend-mode: color;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.programhome h3,h4,h5 {
+  background-color: #fcca42;
+  bottom: 20px;
+  position: absolute;
+  padding: 12px 40px;
+  text-transform: uppercase;
+  color: black;
+}
+.program {
+  height: 400px;
   background-color: rgba(0, 0, 0, 0.2);
   background-blend-mode: color;
   background-position: center;
@@ -150,7 +166,7 @@ AboutUs Component Section
 .program2 {
   background-image: url("./Image/classsTwo.jpg");
 }
-.program h3 {
+.program h3,h4,h5 {
   background-color: #fcca42;
   bottom: 20px;
   position: absolute;
@@ -176,4 +192,8 @@ AboutUs Component Section
 }
 .footer p{
   font-weight: bold;
+}
+.display-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }

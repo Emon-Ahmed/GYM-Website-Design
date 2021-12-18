@@ -1,25 +1,20 @@
 import React from "react";
 import { Table } from "react-bootstrap";
-
+import { useSelector } from 'react-redux';
 export default function Order() {
+  const {orders} = useSelector(state=> state.customer)
   return (
     <div>
       <Table striped bordered hover>
         <thead>
           <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
+            <th>Name</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
+        {orders?.map(item=> <tr key={item._id}>
+           <td >{item.name}</td>
+          </tr>)}
         </tbody>
       </Table>
     </div>

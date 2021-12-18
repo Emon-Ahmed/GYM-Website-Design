@@ -1,12 +1,14 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+import { useSelector } from "react-redux";
 
 export default function Dashboard() {
+  const { user } = useSelector((state) => state.auth);
   return (
     <>
-      <p>Hello name (not name? Log Out)</p>
+      <p>Hello {user?.email}</p>
 
-      <div className="d-flex">
+      {/* <div className="d-flex">
         <Card className="mx-1" border="primary" style={{ width: "18rem" }}>
           <Card.Header className="fw-bold">Total Order</Card.Header>
           <Card.Body>
@@ -25,7 +27,7 @@ export default function Dashboard() {
             <Card.Title><h1 className="fw-bolder" >00</h1> </Card.Title>
           </Card.Body>
         </Card>
-      </div>
+      </div> */}
     </>
   );
 }

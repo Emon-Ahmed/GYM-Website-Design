@@ -1,31 +1,56 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SubHeader from "../Components/SubHeader";
 import Footer from "../Components/Footer";
 import { Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { AiOutlineGoogle } from "react-icons/ai";
+import { useDispatch } from "react-redux";
+import {
+  useNavigate,
+  useLocation,
+  Navigate
+} from "react-router-dom";
+
 import {
   getAuth,
   signInWithPopup,
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut
 } from "firebase/auth";
 import initializeFirebase from "../Firebase/InitializeApp";
+import { userLoggedIn } from "../Redux/auth/action";
 initializeFirebase();
 
 const auth = getAuth();
 const provider = new GoogleAuthProvider();
 
 export default function Register() {
-  var [emailLog, setEmailLog] = useState("");
-  var [passwordLog, setPasswordLog] = useState("");
-  var [emailRegData, setEmailReg] = useState("");
-  var [passwordRegData, setPasswordReg] = useState("");
+  const [emailLog, setEmailLog] = useState("");
+  const [passwordLog, setPasswordLog] = useState("");
+  const [emailRegData, setEmailReg] = useState("");
+  const [passwordRegData, setPasswordReg] = useState("");
+
+  let navigate = useNavigate();
+  let location = useLocation();
+  let from = location.state?.from?.pathname || "/";
+
+  const dispatch = useDispatch();
+
+  const logOut = () => {
+    signOut(auth)
+      .then(() => {
+        dispatch(userLoggedIn());
+        navigate('/register')
+      })
+      .catch((error) => {});
+  };
 
   const googleLog = () => {
     signInWithPopup(auth, provider).then((result) => {
       const user = result.user;
+      navigate(from)
       console.log(user);
     });
   };
@@ -33,9 +58,8 @@ export default function Register() {
   const userLog = () => {
     signInWithEmailAndPassword(auth, emailLog, passwordLog).then(
       (userCredential) => {
-        // Signed in
         const user = userCredential.user;
-        // ...
+        navigate(from)
         console.log(user);
       }
     );
@@ -44,9 +68,8 @@ export default function Register() {
   const userReg = () => {
     createUserWithEmailAndPassword(auth, emailRegData, passwordRegData).then(
       (userCredential) => {
-        // Signed in
         const user = userCredential.user;
-        // ...
+        navigate(from)
         console.log(user);
       }
     );
@@ -104,15 +127,14 @@ export default function Register() {
               <Button onClick={userLog} variant="primary" type="submit">
                 Login
               </Button>
-              <Button
-                className="mx-2"
-                onClick={googleLog}
-                type="submit"
-              >
+              <Button className="mx-2" onClick={googleLog} type="submit">
                 <span>
                   <AiOutlineGoogle />
                 </span>
                 <span>Google</span>
+              </Button>
+              <Button onClick={logOut} variant="primary" type="submit">
+                Logout
               </Button>
             </div>
           </div>
